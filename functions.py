@@ -41,7 +41,6 @@ def parse_html(html):
         in_review = soup.find('div', {'id': 'ContentPlaceHolder1_spInReview'})
         is_completed = soup.find('div', {'id': 'ContentPlaceHolder1_icCompleted'})
         faa_correspondence = soup.find('div', {'id': 'divMailedCorrespondence'})
-        print('\n'*12)
         if 'action required' in str(html):
             print('Action may be needed; check status!')
         if 'underline' in str(in_review):
